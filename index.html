@@ -3,50 +3,336 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bioinformatics & Biostatistics Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Gonzalo Illán, PhD | Computational One Health Portfolio</title>
+  <meta name="description" content="Portfolio of Gonzalo Illán, PhD: bioinformatics, biostatistics, epidemiology, One Health, environmental health and scientific data analytics." />
+  <style>
+    :root {
+      --bg: #f5f8fb;
+      --card: #ffffff;
+      --ink: #17212f;
+      --muted: #5d6b7a;
+      --blue: #123b5d;
+      --cyan: #23bfd3;
+      --line: #dce6ee;
+      --soft: #eaf6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: var(--cyan);
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2f4d, #147c9d 55%, #34c6d8);
+      color: white;
+      padding: 64px 24px 52px;
+    }
+
+    .hero {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      opacity: 0.86;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 16px;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      max-width: 820px;
+      opacity: 0.95;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(6px);
+      font-size: 0.92rem;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    .nav-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 42px 24px 70px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 1.65rem;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 900px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 26px rgba(18, 59, 93, 0.07);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 11px;
+      color: var(--muted);
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #ffffff, #eaf8fb);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: white;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding-top: 42px;
+      }
+
+      .nav-inner {
+        gap: 12px;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-indigo-600 text-white p-6 shadow-md">
-    <h1 class="text-3xl font-bold">🌿 Illan73 Portfolio</h1>
-    <p class="text-md">Bioinformatics & Biostatistics Projects</p>
+<body>
+  <header>
+    <div class="hero">
+      <div class="eyebrow">Bioinformatics · Biostatistics · One Health</div>
+      <h1>Gonzalo Illán, PhD</h1>
+      <p class="subtitle">
+        Computational biology and scientific data analytics portfolio focused on environmental epidemiology, zoonotic diseases, animal health, aquaculture and data-driven research.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Bioinformatics</span>
+        <span class="tag">Biostatistics</span>
+        <span class="tag">Environmental Epidemiology</span>
+        <span class="tag">One Health</span>
+        <span class="tag">Zoonoses</span>
+        <span class="tag">Scientific Data Analysis</span>
+      </div>
+    </div>
   </header>
 
-  <main class="p-6 max-w-4xl mx-auto">
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-2">👋 About Me</h2>
-      <p>
-        I hold a PhD in Science (Animal Health) and a BSc/MSc in Biology and Food Science & Technology, with over 20 years of experience in scientific research. I'm currently pursuing a Master's Degree in Bioinformatics and Biostatistics at the Universitat Oberta de Catalunya (UOC). My interests focus on data-driven analysis in epidemiology, zoonoses, and viral genomics. I also translate biomedical documents (EN↔ES), helping bridge language barriers in science.
+  <nav>
+    <div class="nav-inner">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p class="intro">
+        I am a scientist and researcher based in Vigo, Spain, with a PhD in Science specialized in Animal Health and Epidemiology, and advanced training in Bioinformatics and Biostatistics. My work connects biological sciences, epidemiology, environmental health and computational tools to support research, technical consultancy and data-driven decision making.
+      </p>
+      <p class="intro">
+        My professional background includes international postdoctoral research in the United States, aquaculture and fish health research, laboratory management, ISO/IEC 17025 technical auditing, biomedical documentation review and scientific data analysis.
       </p>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold mb-2">🔬 Featured Projects</h2>
-      <ul class="space-y-4">
-        <li class="bg-white p-4 rounded shadow">
-          <h3 class="text-lg font-bold">Next Pandemic Game</h3>
-          <p>What are the odds for a new pandemic? Who, when, where…? Are we ready?</p>
-          <a href="https://github.com/Illan73/next_pandemic_game" class="text-indigo-600 hover:underline">View on GitHub →</a>
-        </li>
-
-        <li class="bg-white p-4 rounded shadow">
-          <h3 class="text-lg font-bold">Avian Flu</h3>
-          <p> Tracking of avian influenza outbreaks using Python and statistical modeling.</p>
-          <a href="https://github.com/Illan73/avian_flu" class="text-indigo-600 hover:underline">View on GitHub →</a>
-        </li>
-      </ul>
+    <section id="expertise">
+      <h2>Core expertise</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Computational One Health</h3>
+          <p>Integration of animal, human and environmental health perspectives through data analysis, epidemiology and biological interpretation.</p>
+        </div>
+        <div class="card">
+          <h3>Environmental & zoonotic epidemiology</h3>
+          <p>Interest in environmental drivers of disease emergence, zoonoses, aquatic ecosystems, toxicological exposure and population-level health risk.</p>
+        </div>
+        <div class="card">
+          <h3>Bioinformatics & biostatistics</h3>
+          <p>Applied analysis of biological and biomedical data using statistical methods, reproducible workflows and scientific computing.</p>
+        </div>
+        <div class="card">
+          <h3>Aquaculture and animal health</h3>
+          <p>Experience in fish health, aquatic pathology, epidemiology, laboratory management and applied R&D in aquaculture systems.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-xl font-semibold mb-2">📬 Contact</h2>
-      <p>
-        Feel free to connect with me on <a href="https://github.com/Illan73" class="text-indigo-600 hover:underline">GitHub</a> or send me a message.
-      </p>
+    <section id="projects">
+      <h2>Featured projects</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="project-status">In development</span>
+          <h3>Environmental Zoonotic Risk Mapping</h3>
+          <p>Spatial epidemiology project exploring how environmental variables may influence zoonotic disease risk using Python, GIS and statistical modeling.</p>
+          <a href="https://github.com/Illan73" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="card">
+          <span class="project-status">Planned</span>
+          <h3>PFAS & Environmental Health Analytics</h3>
+          <p>Data analysis workflow focused on environmental toxicology indicators, exposure data and potential public health interpretation.</p>
+          <a href="https://github.com/Illan73" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="card">
+          <span class="project-status">In development</span>
+          <h3>Avian Influenza Data Tracker</h3>
+          <p>Exploratory analysis of avian influenza outbreak data, combining epidemiological summaries, visualization and reproducible reporting.</p>
+          <a href="https://github.com/Illan73" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+        <div class="card">
+          <span class="project-status">Concept</span>
+          <h3>Aquaculture Disease Analytics</h3>
+          <p>Applied analytics for fish health and aquaculture research, including disease monitoring, risk factors and biological data interpretation.</p>
+          <a href="https://github.com/Illan73" target="_blank" rel="noopener">View on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Tools & methods</h2>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">R</span>
+        <span class="skill">SQL</span>
+        <span class="skill">SPSS</span>
+        <span class="skill">SAS</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Biostatistics</span>
+        <span class="skill">Epidemiological modeling</span>
+        <span class="skill">Data visualization</span>
+        <span class="skill">Scientific computing</span>
+        <span class="skill">Bioinformatics</span>
+        <span class="skill">ISO/IEC 17025</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+        <h2>Contact</h2>
+        <p>
+          Open to remote collaborations, scientific consulting, data analysis projects and international research opportunities in bioinformatics, epidemiology, One Health and environmental health.
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:gonzaloillan@hotmail.com">gonzaloillan@hotmail.com</a><br />
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/gonzaloillan/" target="_blank" rel="noopener">linkedin.com/in/gonzaloillan</a><br />
+          <strong>GitHub:</strong> <a href="https://github.com/Illan73" target="_blank" rel="noopener">github.com/Illan73</a><br />
+          <strong>GSNOOK:</strong> <a href="https://www.gsnook.com/" target="_blank" rel="noopener">gsnook.com</a>
+        </p>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-gray-100 text-center p-4 text-sm text-gray-600">
-    © 2025 Illan73 — All rights reserved.
+  <footer>
+    © 2026 Gonzalo Illán — Computational One Health & Scientific Data Analytics
   </footer>
 </body>
 </html>
+
